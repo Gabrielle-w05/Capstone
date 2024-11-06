@@ -18,7 +18,7 @@
 * I like the color palette.
 * There was not anything unique about it
 ## My take away from my research:
-#### <p> *These types of websites are very useful wise but it is a struggle to keep the community active and I suspect that it is because the lack of variety and uniqueness. I will take the ideas of of these websites and put my own spin to it. My idea so far is to make it structure as a social meedia but with froum aspects.* <p>
+#### <p> *These types of websites are very useful wise but it is a struggle to keep the community active and I suspect that it is because the lack of variety and uniqueness. I will take the ideas of of these websites and put my own spin to it. My idea so far is to make it structure as a social media but with forum aspects.* <p>
 ## Wireframes
 * [Homepage](https://drive.google.com/file/d/1VnaxqHOw7-90FmBAfKRu5HWtGbtPFdCk/view?usp=sharing)
 * [User Profile](https://drive.google.com/file/d/1JYZvfMsrzIOplN_A3ZqWcR2ip5_KQoQX/view?usp=sharing)
@@ -29,7 +29,7 @@
 [Fur Talk Flow Chart](https://drive.google.com/file/d/1NkUEeyTKmyNs_9jLAPj8lcb6HbIKF3eN/view?usp=sharing)
 
 ## Design UI/UIX
-* [Color Pallette](https://coolors.co/palette/3581b8-ffffff-2f2f2f)
+* [Color Pallette](https://coolors.co/fffcf2-252422-eb5e28)
 * [Font 1](https://fonts.google.com/specimen/Sixtyfour?query=sixtyfour)
 * [Font 2](https://fonts.google.com/specimen/Roboto+Slab)
 * [Right arrow](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:chevron_right:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e8eaed)
@@ -48,4 +48,7 @@
 * [Arrow](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:play_arrow:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e8eaed&icon.query=arrow)
 * [Dropdown arrow](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:arrow_drop_down:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e8eaed&icon.query=arrow)
 ## SWOT Analysis
-[Swot Analysis Link](https://docs.google.com/document/d/1FSWkfUbOayEq2pxqFX8CQLEOHQ5fLyfG49NgDOi7QUw/edit?usp=sharing)
+* [Swot Analysis Link](https://docs.google.com/document/d/1FSWkfUbOayEq2pxqFX8CQLEOHQ5fLyfG49NgDOi7QUw/edit?usp=sharing)
+
+## List of APIs
+* [The Cat API](https://thecatapi.com/)

@@ -1,0 +1,50 @@
+body {
+  background-color: #ffffff;
+
+}
+
+nav > ul {
+  background-color: #788aa3;
+  color: #ffffff;
+  margin: 0px;
+  border: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+
+}
+
+
+a:active {
+  color: #ffffff;
+  background-color: #ffffff;
+}
+a:hover {
+  background-color: #ffffff;
+  color: #ffffff;
+}
+a:visited {
+  color: #04151f;
+}
+
+a {
+  background-color:;
+  color: #ffff;
+  padding: 10px;
+  margin: 10px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+border: solid black;
+}
+
+#laying-down > * {
+  margin: 50px;
+  border: 30px;
+  padding: 30px;
+}
+
+
