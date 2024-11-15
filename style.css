@@ -42,9 +42,25 @@ border: solid black;
 }
 
 #laying-down > * {
-  margin: 50px;
-  border: 30px;
-  padding: 30px;
+  margin: 20px;
+  border: 10px;
+  padding: 10px;
+  height: 500px
 }
 
+.Welcome > p {
+  font-size: larger;
+  margin: 20px;
+  border: 10px;
+  padding: 10px;
+}
 
+#icon > img {
+  height: 200px;
+}
+
+#cat-api  {
+  display: flex;
+  flex-direction: column;
+
+}

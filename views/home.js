@@ -7,8 +7,7 @@ export default () => html`
 </div>
 <div class="Welcome">
   <p> Welcome to the official Fur Talk website!
-    Want to learn more about the website? Head over to the
-  <a href="about"> About Page</a> </p>
+    Want to learn more about the website? Head over to the<a href="about"> About Page</a> </p>
 </div>
 `;
 
