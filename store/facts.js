@@ -1,4 +1,5 @@
 export default {
   header: "Fact Page",
-  view: "facts"
+  view: "facts",
+  info: [],
 };
