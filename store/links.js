@@ -5,5 +5,6 @@ export default [
   { url: "/facts", text: "Cat Facts" },
   { url: "/about", text: "About" },
   { url: "/gallery", text: "Gallery" },
-  { url: "/questionAnswer", text: "Q&A" }
+  { url: "/questionAnswer", text: "Q&A" },
+  { url: "/postQuestions", text: "Board" }
 ];

@@ -29,8 +29,8 @@
 [Fur Talk Flow Chart](https://drive.google.com/file/d/1NkUEeyTKmyNs_9jLAPj8lcb6HbIKF3eN/view?usp=sharing)
 
 ## Design UI/UIX
-* [Color Pallette](https://coolors.co/fffcf2-252422-eb5e28)
-* [Font 1](https://fonts.google.com/specimen/Sixtyfour?query=sixtyfour)
+* [Color Pallette](https://coolors.co/fffafa-ffef00-e0b0ff)
+* [Font 1](https://fonts.google.com/specimen/Bebas+Neue)
 * [Font 2](https://fonts.google.com/specimen/Roboto+Slab)
 * [Right arrow](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:chevron_right:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e8eaed)
 * [Left arrow](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:chevron_left:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e8eaed)
