@@ -6,3 +6,4 @@ export { default as gallery } from "./gallery";
 export { default as home } from "./home";
 export { default as questionAnswer } from "./questionAnswer";
 export { default as links } from "./links";
+export { default as postQuestions } from "./postQuestions";
