@@ -2,6 +2,6 @@ import html from "html-literal";
 
 export default () => html`
   <footer>
-    &copy; 2024 Gabrielle Westbrook
+  By Gabrielle Westbrook 2024
   </footer>
 `;

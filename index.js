@@ -82,6 +82,33 @@ router.hooks({
               done();
           });
         break;
+
+ case "home":
+        axios.get(` https://api.thecatapi.com/v1/images/search?limit=1&api_key=${process.env.THE_CAT_API_KEY}`)
+          .then(response => {
+            let catImages = response?.data?.map(cat => {
+              console.log(cat.url);
+              return cat?.url
+            });
+            console.log(catImages, "cat images");
+
+
+            if (!catImages) {
+              console.log("No cat images");
+            } else {
+              store.home.url = catImages;
+            };
+
+            done();
+
+          }).catch(error => {
+            console.log("oh no :<", error);
+            done();
+          });
+        break;
+
+
+
       default:
 
         done();
