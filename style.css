@@ -1,38 +1,44 @@
-body {
-  background-color: #FFFAFA;
 
+
+body {
+  background-color: #2E2F2F;
+margin: 0;
 }
 
 nav > ul {
-  background-color: #E0B0FF;
+  background-image: linear-gradient(to bottom right, #E0B0FF, #32CBFF);
   color: #E0B0FF;
   margin: 0px;
-  border: #E0B0FF 30px solid;
+  /* border: #E0B0FF 30px solid; */
   padding: 30px;
   display: flex;
   flex-direction:row;
   align-items: center;
-  font-family: "Bebos Neue", sans-serif;
-  font: #FFFAFA;
+  font-family: "Sour Gummy", sans-serif;
+
 
 }
 
-
-a:active {
-  color: #;
-  background-color: #FFFAFA;
-}
 a:hover {
-  background-color: #FFFAFA;
+  background-color: #32CBFF;
   color: #E0B0FF;
 }
-a:visited {
-  color: #04151f;
+a:active {
+  color: #323232;
+  background-color: #32CBFF;
+}
+
+.welcome  a:active {
+  color: #32CBFF;
+}
+
+.welcome  a:visited {
+  color: #32CBFF;
 }
 
 a {
-  background-color:#E0B0FF;
-  color: #FFFAFA;
+  color: #323232;
+
   padding: 10px;
   margin: 10px;
 }
@@ -43,7 +49,7 @@ a {
 border: solid black;
 }
 
-#laying-down > * {
+#slide-container > * {
   margin: 20px;
   border: 10px;
   padding: 10px;
@@ -51,13 +57,15 @@ border: solid black;
 
 }
 
-.Welcome > p {
+.welcome > p {
   font-size: larger;
   margin: 20px;
   border: 10px;
-  padding: 10px;
+  padding-left: 15%;
   justify-content: center;
 }
+
+
 
 #icon > img {
   height: 200px;
@@ -71,15 +79,15 @@ border: solid black;
 
 #fact-api {
   display: flex;
-  border: #FFEF00 solid;
-  background-image: linear-gradient(to bottom right, #E0B0FF, #FFEF00);
+  border: #32CBFF solid;
+  background-image: linear-gradient(to bottom right, #E0B0FF, #32CBFF);
 align-items: center;
 padding: 100px;
-color: #FFFAFA;
+color: #2E2F2F;
 border-color: #E0B0FF;
 font-family: "Sour Gummy", sans-serif;
 font-optical-sizing: auto;
-font-weight: 100px;
+font-weight: 00;
 font-style: normal;
 font-variation-settings:
   "wdth" 100;
@@ -89,12 +97,51 @@ font-variation-settings:
 
 
 h1 {
+  background-image: linear-gradient(to bottom right, #E0B0FF, #32CBFF);
   font-family: "Sour Gummy", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 100px;
+  font-weight: 100;
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
     display: flex;
     justify-content: center;
+}
+
+h2, h3, p {
+  color: #E0B0FF;
+}
+
+#cat-welcome {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  align-items: center;
+padding-left: 20%;
+}
+
+
+
+footer {
+  background-image: linear-gradient(to bottom right, #E0B0FF, #32CBFF);
+color: #2E2F2F;
+}
+
+.contact-me {
+ background-image:url("assets/img/orange-cat.jpg");
+width: 100%;
+height: 100%;
+padding: 500px;
+
+}
+
+.contact-me p {
+  display: flex;
+  justify-content: start;
+  font-size: larger;
+  border-color: #2E2F2F;
+}
+
+.contact-me a {
+  background-color: #32CBFF;
 }

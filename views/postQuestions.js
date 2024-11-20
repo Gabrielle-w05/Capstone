@@ -1,4 +1,11 @@
 import html from "html-literal";
 export default () => html `
-<h1>This is the question board page</h1>
+
+<div>
+  <h1>User Board</h1>
+<div class="question-posts">
+  <h2>Question Post</h2>
+</div>
+</div>
+
 `
