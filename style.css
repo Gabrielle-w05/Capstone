@@ -146,4 +146,94 @@ padding: 500px;
   background-color: #32CBFF;
 }
 
+ @media (max-width: 412px) {
+nav > ul {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 0;
+}
+ }
 
+ @media (max-width: 412px) {
+  #cat-welcome {
+    display:flex;
+    justify-content: center;
+    padding: 0 0;
+  }
+   }
+
+   @media (max-width: 412px) {
+    #cat-welcome > img {
+      display: flex;
+      justify-content: center;
+   width: 200px;
+   flex-direction: row;
+    }
+   }
+
+
+ @media (max-width: 412px) {
+  body > * {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 0;
+  }
+   }
+
+   @media (max-width: 412px) {
+    p {
+      font-size: medium;
+    }
+   }
+
+   @media (max-width:412) {
+    .contact-me {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+   }
+
+   @media (max-width:412) {
+    .contact-me {
+      background-image:url("assets/img/cat capstone 2.jpg");
+      display: flex;
+      flex-direction: column;
+     width: 50%;
+     height: 50%;
+     padding: 100px;
+
+     }
+   }
+
+   @media (max-width:412) {
+#fact-api {
+width: 30%;
+border:20%;
+
+   }
+
+   @media (max-width) {
+    h1, h2, h3 {
+width: 95%;
+    }
+   }
+
+   @media (max-width:412) {
+    #fact-api > h3 {
+    width: 22%;
+
+       }
+
+.resource-list {
+padding: 0;
+margin: 0;
+font-family:'Courier New', Courier, monospace;
+}
+
+.resource-list {
+list-style: none;
+background-color: #E0B0FF;
+}

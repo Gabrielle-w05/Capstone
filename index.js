@@ -4,6 +4,7 @@ import Navigo from "navigo";
 import { camelCase } from "lodash";
 import { home } from "./views";
 import axios from "axios";
+import { error } from "console";
 
 const router = new Navigo("/");
 
@@ -117,9 +118,50 @@ router.hooks({
   already: match => {
     const view = match?.data?.view ? camelCase(match.data.view) : "home";
 
+
     render(store[view]);
   },
   after: match => {
+  const view = match?.data?.view ? camelCase(match.data.view) : "home";
+
+  if (view === "postQuestions") {
+    document.querySelector("form").addEventListener("submit", event => {
+      event.preventDefault();
+
+      const inputList = event.target.elements;
+      console.log("Input Element List", inputList);
+
+      const questions = [];
+
+
+
+      for (let input of inputList.questions) {
+
+        if (input.checked) {
+          questions.pusj(input.value);
+        }
+      }
+      const requestData = {
+        questions: inputList.questions.value
+      };
+
+      console.log("request body", requestData);
+
+      axios
+      .post(`${process.env.QUESTION_POST_API}/questions`, requestData)
+      .then(response => {
+        store.postQuestions.questions.push(response.data);
+        router.navigate("postQuestions");
+      })
+
+      .catch(error => {
+        console.log("oh no :<", error);
+      });
+    });
+  }
+
+
+
     router.updatePageLinks();
 
     document.querySelector(".topNav").addEventListener("click", () => {
