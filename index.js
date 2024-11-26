@@ -138,11 +138,11 @@ router.hooks({
       for (let input of inputList.questions) {
 
         if (input.checked) {
-          questions.pusj(input.value);
+          questions.push(input.value);
         }
       }
       const requestData = {
-        questions: inputList.questions.value
+        questions: questions
       };
 
       console.log("request body", requestData);

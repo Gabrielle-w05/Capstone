@@ -24,17 +24,17 @@ router.post("/", async (request, response) => {
   }
 });
 
-// Get all pizzas route
+
 router.get("/", async (request, response) => {
   try {
-    // Store the query params into a JavaScript Object
-    const query = request.query; // Defaults to an empty object {}
+
+    const query = request.query;
 
     const data = await Question.find(query);
 
     response.json(data);
   } catch (error) {
-    // Output error to the console incase it fails to send in response
+
     console.log(error);
 
     return response.status(500).json(error.errors);
@@ -42,35 +42,35 @@ router.get("/", async (request, response) => {
 });
 
 
-// Get a single pizza by ID
+
 router.get("/:id", async (request, response) => {
   try {
     const data = await Question.findById(request.params.id);
 
     response.json(data);
   } catch (error) {
-    // Output error to the console incase it fails to send in response
+
     console.log(error);
 
     return response.status(500).json(error.errors);
   }
 });
 
-// Delete a pizza by ID
+
 router.delete("/:id", async (request, response) => {
   try {
     const data = await Question.findByIdAndDelete(request.params.id);
 
     response.json(data);
   } catch (error) {
-    // Output error to the console incase it fails to send in response
+
     console.log(error);
 
     return response.status(500).json(error.errors);
   }
 });
 
-// Update a single pizza by ID
+
 router.put("/:id", async (request, response) => {
   try {
     const body = request.body;
@@ -90,7 +90,7 @@ router.put("/:id", async (request, response) => {
 
     response.json(data);
   } catch (error) {
-    // Output error to the console incase it fails to send in response
+
     console.log(error);
 
     if ("name" in error && error.name === "ValidationError")
