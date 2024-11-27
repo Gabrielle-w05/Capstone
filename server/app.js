@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import questions from "./routers/questions.js";
 
-console.log("questions", questions);
+// console.log("questions", questions);
 
 dotenv.config();
 
@@ -50,12 +50,7 @@ app.get("/status", (request, response) => {
 
 // app.listen(4040, () => console.log("Listening on port 4040"));
 
-app
-.use("/questions", questions)
-.post("/question")
-.get((request, response) => {
 
-  const questions = request.params.questions;
-});
+app.use("/questions", questions);
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

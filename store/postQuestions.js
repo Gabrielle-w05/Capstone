@@ -1,4 +1,5 @@
 export default {
   header: "Board",
-  view: "postQuestions"
+  view: "postQuestions",
+  questions: []
 };
