@@ -48,7 +48,7 @@ app.get("/status", (request, response) => {
 });
 
 
-app.listen(4040, () => console.log("Listening on port 4040"));
+// app.listen(4040, () => console.log("Listening on port 4040"));
 
 app
 .use("/questions", questions)
@@ -58,3 +58,4 @@ app
   const questions = request.params.questions;
 });
 
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
