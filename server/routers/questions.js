@@ -1,12 +1,13 @@
 import {  Router } from "express";
 import Question from "../models/Question.js"
 
-console.log("here", Question)
+// console.log("here", Question)
 
 const router = Router();
 
 
 router.post("/", async (request, response) => {
+console.log(request.body);
   try {
     const newQuestion = new Question(request.body);
 
@@ -79,7 +80,7 @@ router.put("/:id", async (request, response) => {
       request.params.id,
       {
         $set: {
-          question:question.body
+          question:questions.body
         }
       },
       {

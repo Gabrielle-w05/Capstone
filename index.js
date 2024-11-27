@@ -133,7 +133,7 @@ router.hooks({
     let question = document.getElementById("question").value;
     console.log(question);
 
-    store.questionAnswer.questions = question;
+
 
 
 
@@ -146,15 +146,14 @@ router.hooks({
       //   }
       // }
       const requestData = {
-        questions: question
+        question: question
       };
 
-      console.log("request body", requestData);
 
       axios
       .post(`${process.env.QUESTION_POST_API}/questions`, requestData)
       .then(response => {
-        store.postQuestions.questions.push(response.data);
+        store.questionAnswer.questions.push(response.data);
         router.navigate("questionAnswer");
       })
 
@@ -164,6 +163,44 @@ router.hooks({
     });
   }
 
+  if (view === "postQuestion") {
+    let questionForm = document.getElementById("question-form")
+    console.log("Question Form", questionForm);
+     questionForm.addEventListener("submit", event => {
+       event.preventDefault();
+
+    let question = document.getElementById("question").value;
+    console.log(question);
+
+
+
+
+
+
+
+      // for (let input of inputList.questions) {
+
+      //   if (input.checked) {
+      //     questions.push(input.value);
+      //   }
+      // }
+      const requestData = {
+        question: question
+      };
+
+
+      axios
+      .get(`${process.env.QUESTION_POST_API}/questions`, requestData)
+      .then(response => {
+        store.postQuestions.questions.push(response.data);
+        router.navigate("postQuestions");
+      })
+
+      .catch(error => {
+        console.log("oh no :<", error);
+      });
+    });
+
 
 
     router.updatePageLinks();
@@ -172,7 +209,7 @@ router.hooks({
       document.querySelector("nav > ul").classList.toggle("hidden--mobile");
     });
   }
-});
+}});
 
 
 
