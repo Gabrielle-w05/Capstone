@@ -124,25 +124,29 @@ router.hooks({
   after: match => {
   const view = match?.data?.view ? camelCase(match.data.view) : "home";
 
-  if (view === "postQuestions") {
-    document.querySelector("form").addEventListener("submit", event => {
+  if (view === "questionAnswer") {
+    let questionForm = document.getElementById("question-form")
+    console.log("Question Form", questionForm);
+    questionForm.addEventListener("submit", event => {
       event.preventDefault();
 
-      const inputList = event.target.elements;
-      console.log("Input Element List", inputList);
+    let question = document.getElementById("question").value;
+    console.log(question);
 
-      const questions = [];
+    store.questionAnswer.questions = question;
 
 
 
-      for (let input of inputList.questions) {
 
-        if (input.checked) {
-          questions.push(input.value);
-        }
-      }
+
+      // for (let input of inputList.questions) {
+
+      //   if (input.checked) {
+      //     questions.push(input.value);
+      //   }
+      // }
       const requestData = {
-        questions: questions
+        questions: question
       };
 
       console.log("request body", requestData);
@@ -151,7 +155,7 @@ router.hooks({
       .post(`${process.env.QUESTION_POST_API}/questions`, requestData)
       .then(response => {
         store.postQuestions.questions.push(response.data);
-        router.navigate("postQuestions");
+        router.navigate("questionAnswer");
       })
 
       .catch(error => {

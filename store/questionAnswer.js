@@ -1,4 +1,5 @@
 export default {
   header: "Q & A",
-  view: "questionAnswer"
+  view: "questionAnswer",
+  questions: []
 };
