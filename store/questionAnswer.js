@@ -1,5 +1,5 @@
 export default {
   header: "Q & A",
   view: "questionAnswer",
-  questions: []
+  question: []
 };
