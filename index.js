@@ -2,9 +2,10 @@ import { header, nav, main, footer } from "./components";
 import * as store from "./store";
 import Navigo from "navigo";
 import { camelCase } from "lodash";
-import { home } from "./views";
+import { home, postQuestions } from "./views";
 import axios from "axios";
 import { error } from "console";
+import { response } from "express";
 
 const router = new Navigo("/");
 
@@ -68,7 +69,7 @@ router.hooks({
             // } else {
             //   store.facts.data[0] = catFacts;
             // };
-            console.log("fact response data",  response.data);
+            console.log("fact response data", response.data);
             store.facts.info = {
               funFacts: response.data.data[0]
             };
@@ -79,12 +80,12 @@ router.hooks({
             done();
           })
           .catch(error => {
-              console.log("oh no :<", error);
-              done();
+            console.log("oh no :<", error);
+            done();
           });
         break;
 
- case "home":
+      case "home":
         axios.get(` https://api.thecatapi.com/v1/images/search?limit=1&api_key=${process.env.THE_CAT_API_KEY}`)
           .then(response => {
             let catImages = response?.data?.map(cat => {
@@ -108,12 +109,28 @@ router.hooks({
           });
         break;
 
+    case postQuestions:
+    axios
+    .get(`${process.env.QUESTION_POST_API}/questions`)
+    .then(response => {
+
+      console.log("response", response);
+      store.postQuestions.question = response.data;
+
+      done();
+    })
+    .catch(error => {
+      console.log("oh no :<", error);
+      done();
+    });
+    break;
+
 
 
       default:
 
         done();
-        }
+    }
   },
   already: match => {
     const view = match?.data?.view ? camelCase(match.data.view) : "home";
@@ -122,94 +139,56 @@ router.hooks({
     render(store[view]);
   },
   after: match => {
-  const view = match?.data?.view ? camelCase(match.data.view) : "home";
+    const view = match?.data?.view ? camelCase(match.data.view) : "home";
 
-  if (view === "questionAnswer") {
-    let questionForm = document.getElementById("question-form")
-    console.log("Question Form", questionForm);
-    questionForm.addEventListener("submit", event => {
-      event.preventDefault();
+    if (view === "questionAnswer") {
+      let questionForm = document.getElementById("question-form")
+      console.log("Question Form", questionForm);
+      questionForm.addEventListener("submit", event => {
+        event.preventDefault();
 
-    let question = document.getElementById("question").value;
-    console.log(question);
-
-
+        let question = document.getElementById("question").value;
+        console.log(question);
 
 
 
 
 
-      // for (let input of inputList.questions) {
-
-      //   if (input.checked) {
-      //     questions.push(input.value);
-      //   }
-      // }
-      const requestData = {
-        question: question
-      };
 
 
-      axios
-      .post(`${process.env.QUESTION_POST_API}/questions`, requestData)
-      .then(response => {
-        store.questionAnswer.questions.push(response.data);
-        router.navigate("questionAnswer");
-      })
+        // for (let input of inputList.questions) {
 
-      .catch(error => {
-        console.log("oh no :<", error);
+        //   if (input.checked) {
+        //     questions.push(input.value);
+        //   }
+        // }
+        const requestData = {
+          question: question
+        };
+
+
+        axios
+          .post(`${process.env.QUESTION_POST_API}/questions`, requestData)
+          .then(response => {
+            store.questionAnswer.questions.push(response.data);
+            router.navigate("questionAnswer");
+          })
+
+          .catch(error => {
+            console.log("oh no :<", error);
+          });
       });
-    });
-  }
-
-  if (view === "postQuestion") {
-    let questionForm = document.getElementById("question-form")
-    console.log("Question Form", questionForm);
-     questionForm.addEventListener("submit", event => {
-       event.preventDefault();
-
-    let question = document.getElementById("question").value;
-    console.log(question);
 
 
 
+      router.updatePageLinks();
 
-
-
-
-      // for (let input of inputList.questions) {
-
-      //   if (input.checked) {
-      //     questions.push(input.value);
-      //   }
-      // }
-      const requestData = {
-        question: question
-      };
-
-
-      axios
-      .get(`${process.env.QUESTION_POST_API}/questions`, requestData)
-      .then(response => {
-        store.postQuestions.questions.push(response.data);
-        router.navigate("postQuestions");
-      })
-
-      .catch(error => {
-        console.log("oh no :<", error);
+      document.querySelector(".topNav").addEventListener("click", () => {
+        document.querySelector("nav > ul").classList.toggle("hidden--mobile");
       });
-    });
-
-
-
-    router.updatePageLinks();
-
-    document.querySelector(".topNav").addEventListener("click", () => {
-      document.querySelector("nav > ul").classList.toggle("hidden--mobile");
-    });
+    }
   }
-}});
+});
 
 
 

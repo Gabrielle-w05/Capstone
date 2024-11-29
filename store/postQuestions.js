@@ -1,5 +1,5 @@
 export default {
   header: "Board",
   view: "postQuestions",
-  questions: []
+  question: []
 };
