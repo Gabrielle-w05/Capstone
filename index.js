@@ -2,10 +2,9 @@ import { header, nav, main, footer } from "./components";
 import * as store from "./store";
 import Navigo from "navigo";
 import { camelCase } from "lodash";
-import { home, postQuestions } from "./views";
+// import { home, postQuestions } from "./views";
 import axios from "axios";
-import { error } from "console";
-import { response } from "express";
+
 
 const router = new Navigo("/");
 
@@ -109,7 +108,7 @@ router.hooks({
           });
         break;
 
-    case postQuestions:
+    case "postQuestions":
     axios
     .get(`${process.env.QUESTION_POST_API}/questions`)
     .then(response => {
