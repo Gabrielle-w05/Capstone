@@ -420,7 +420,7 @@ nav > ul {
 
    @media (max-width:412) {
     .contact-me {
-      background-image:url("assets/img/cat capstone 2.jpg");
+      background-image:url("assets/img/cat-capstone-2.jpg");
       display: flex;
       flex-direction: column;
      width: 50%;
