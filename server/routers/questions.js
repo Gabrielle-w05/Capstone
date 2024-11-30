@@ -80,7 +80,7 @@ router.put("/:id", async (request, response) => {
       request.params.id,
       {
         $set: {
-          question:questions.body
+          question: body.question
         }
       },
       {
