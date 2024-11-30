@@ -1,11 +1,11 @@
 import html from "html-literal";
 import navItem from "./navItem.js";
-import webIcon from "../assets/img/website-icon.jpg";
+import websiteIcon from "../assets/img/website.jpeg";
 export default navItems => html`
   <nav>
     <header class="topNav"></header>
     <ul>
-    <img src="${webIcon}">
+    <img src="${websiteIcon}">
       ${navItems.map(item => navItem(item)).join("")}
 
     </ul>
