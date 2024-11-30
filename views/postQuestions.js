@@ -1,6 +1,7 @@
 
 import html from "html-literal";
 export default (state) => html `
+<h1>Question Board</h1>
 <section id="question-post">
 <table id="questions-post">
 <tr>

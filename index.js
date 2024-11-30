@@ -169,7 +169,7 @@ router.hooks({
         axios
           .post(`${process.env.QUESTION_POST_API}/questions`, requestData)
           .then(response => {
-            store.questionAnswer.questions.push(response.data);
+            store.questionAnswer.question.push(response.data);
             router.navigate("questionAnswer");
           })
 

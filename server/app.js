@@ -21,6 +21,14 @@ const PORT = process.env.PORT || 4040;
 
 const app = express();
 
+const logging = (request, response, next) => {
+  console.log(
+    `${request.method} ${request.url} ${new Date().toLocaleString("en-us")}`
+  );
+  next();
+};
+
+
 
 const cors = (req, res, next) => {
   res.setHeader(
@@ -38,7 +46,7 @@ const cors = (req, res, next) => {
 
 app.use(cors);
 app.use(express.json());
-// app.use(logging);
+app.use(logging);
 
 
 
