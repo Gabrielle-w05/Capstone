@@ -1,6 +1,6 @@
 import html from "html-literal";
 import navItem from "./navItem.js";
-import webIcon from "../assets/img/website-icon.jpg";
+import webIcon from "../assets/img/website-icon.JPG";
 export default navItems => html`
   <nav>
     <header class="topNav"></header>
