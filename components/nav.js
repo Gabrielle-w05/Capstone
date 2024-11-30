@@ -5,8 +5,9 @@ export default navItems => html`
   <nav>
     <header class="topNav"></header>
     <ul>
-      ${navItems.map(item => navItem(item)).join("")};
-      <img src="${webIcon}">
+    <img src="${webIcon}">
+      ${navItems.map(item => navItem(item)).join("")}
+
     </ul>
   </nav>
 `;
